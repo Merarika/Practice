@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Raport </title>
+	<link rel="stylesheet" type="text/css" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/raport.css">
+    <link rel="stylesheet" href="../assets/css/general_styles.css">
+</head>
+<body>
+	@@include('./header.html')
+	<div class="d-flex">
+		@@include('./sidebar.html')
+		<div class="raport_wrap">
+			<div class="charts d-flex">
+	            <div class="chart_block d-flex p-relative">
+	                <canvas id="Views_Chart"></canvas>
+	                <div class="views_percent p-absolute">75%</div>
+	                <div class="Info_chart d-flex flex-column jc-center">
+	                    <span class="chart_value">1300</span>
+	                    <span class="name_chart">VIEWS</span>
+	                </div>
+                </div>
+	            <div class="chart_block d-flex p-relative">
+	                 <canvas id="Visitors_Chart"></canvas>
+	                 <div class="visitors_percent p-absolute">35%</div>
+	                 <div class="Info_chart d-flex flex-column jc-center">
+	                     <span class="chart_value">800</span>
+	                     <span class="name_chart">VISITORS</span>
+	                 </div>
+	            </div>
+	            <div class="chart_block d-flex p-relative">
+	                 <canvas id="Impressions_Chart"></canvas>
+	                 <div class="impressions_percent p-absolute">62%</div>
+	                 <div class="Info_chart d-flex flex-column jc-center">
+	                     <span class="chart_value">3800</span>
+	                     <span class="name_chart">IMPRESSIONS</span>
+	                 </div>
+	            </div>
+	        </div>
+			<div class="raport-chart d-flex flex-column">
+				<canvas id="visitorChart" width="1825" height="500"></canvas>
+			</div>
+			<div class="raport-info-titles d-flex ai-center">
+				<p class="raport-campaing-wrap raport-title-item"> Campaing 
+					<i id="campaing" class="fas fa-chevron-down pointer"></i> 
+				</p>
+				<p class="raport-time-wrap raport-title-item"> Time 
+					<i id="time" class="fas fa-chevron-down pointer"></i> 
+				</p>
+				<p class="raport-views-wrap raport-title-item"> Views 
+					<i id="views" class="fas fa-chevron-down pointer"></i>
+				</p>
+				<p class="raport-visitors-wrap raport-title-item"> Visitors 
+					<i id="visitors" class="fas fa-chevron-down pointer"></i>
+				</p>
+				<p class="raport-small-wrap raport-title-item"> CTR 
+					<i id="ctr" class="fas fa-chevron-down pointer"></i>
+				</p>
+				<p class="raport-small-wrap raport-title-item"> CPC 
+					<i id="cpc" class="fas fa-chevron-down pointer"></i>
+				</p>
+				<p class="raport-small-wrap raport-title-item"> CPV
+					<i id="cpv" class="fas fa-chevron-down pointer"></i>
+				</p>
+				<p class="raport-small-wrap raport-title-item"> CPM 
+					<i id="cpm" class="fas fa-chevron-down pointer"></i>
+				</p>
+				<p class="raport-small-wrap raport-title-item"> Status
+					<i id="status" class="fas fa-chevron-down pointer"></i> 
+				</p>
+			</div>
+			<div class="raport-info">		
+				<div class="raport-info-item">
+					<p class="raport-campaing-wrap">Lorem ipsum dolor sit amet tetur</p>
+					<p class="raport-time-wrap">6 days</p>
+					<p class="raport-views-wrap">358 000</p>
+					<p class="raport-visitors-wrap">58 200</p>
+					<p class="raport-small-wrap raport-ctr-wrap">25%</p>
+					<p class="raport-small-wrap raport-cpc-wrap">$3.02</p>
+					<p class="raport-small-wrap raport-cpv-wrap">$2.51</p>
+					<p class="raport-small-wrap raport-cpm-wrap">$28.35</p>
+					<div class="raport-status-wrap d-flex ai-center">
+						<div class="status-ind"></div>
+						<p>Active</p>
+					</div>
+				</div>
+				<div class="raport-info-item">
+					<p class="raport-campaing-wrap"> Sed do eiusmod tempor </p>
+					<p class="raport-time-wrap">7 hours</p>
+					<p class="raport-views-wrap">1 200</p>
+					<p class="raport-visitors-wrap">800</p>
+					<p class="raport-small-wrap raport-ctr-wrap">10%</p>
+					<p class="raport-small-wrap raport-cpc-wrap">$8.45</p>
+					<p class="raport-small-wrap raport-cpv-wrap">$6.13</p>
+					<p class="raport-small-wrap raport-cpm-wrap">$45.22</p>
+					<div class="raport-status-wrap d-flex">
+						<div class="status-ind"></div>
+						<p>Disable</p>
+					</div>
+				</div>
+				<div class="raport-info-item">
+					<p class="raport-campaing-wrap"> Consectetur adipisicing elit sed </p>
+					<p class="raport-time-wrap"> 8 days</p>
+					<p class="raport-views-wrap">69 000</p>
+					<p class="raport-visitors-wrap">7 300</p>
+					<p class="raport-small-wrap raport-ctr-wrap">19%</p>
+					<p class="raport-small-wrap raport-cpc-wrap">$6.22</p>
+					<p class="raport-small-wrap raport-cpv-wrap">$3.90</p>
+					<p class="raport-small-wrap raport-cpm-wrap">$37.80</p>
+					<div class="raport-status-wrap d-flex">
+						<div class="status-ind"></div>
+						<p>Active</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	<script src="https://kit.fontawesome.com/c686eb15da.js" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="./../assets/js/Chart.min.js"></script>
+	<script src="../assets/js/raport.js"></script>
+	<script>
+
+		BtnClickEvent('campaing', '.raport-campaing-wrap');
+		BtnClickEvent('time', '.raport-time-wrap');
+		BtnClickEvent('views', '.raport-views-wrap');
+		BtnClickEvent('visitors', '.raport-visitors-wrap');
+		BtnClickEvent('ctr', '.raport-ctr-wrap');
+		BtnClickEvent('cpc', '.raport-cpc-wrap');
+		BtnClickEvent('cpv', '.raport-cpv-wrap');
+		BtnClickEvent('cpm', '.raport-cpm-wrap');
+		BtnClickEvent('status', '.raport-status-wrap');
+
+		function BtnClickEvent(myId, el) {
+			var btn = document.getElementById(myId);
+			btn.onclick = function() {
+				if(btn.classList.contains("fa-chevron-down")) {
+					SortBy(el, true);
+					btn.classList.toggle("fa-chevron-down");
+					btn.classList.toggle("fa-chevron-up"); 
+				} else {
+					SortBy(el, false);
+					console.log('hello its me');
+					btn.classList.toggle("fa-chevron-down");
+					btn.classList.toggle("fa-chevron-up"); 
+				} 
+			}
+		}
+
+		function SortBy(el, reverse) {
+			var test = document.querySelector('.raport-info');
+			var mySort = [];
+			var row = document.querySelectorAll('.raport-info-item');
+
+			for(var i = 0; i < row.length; i++) {
+				mySort.push(row[i]);
+			}
+
+			mySort.sort((a,b) => {
+				a = a.querySelector(el).innerText;
+				b = b.querySelector(el).innerText;
+				if ((a.search(/\d/) != -1) && (b.search(/\d/) != -1)) {
+					a = cutNum(a);
+					b = cutNum(b);
+				}
+				return reverse ? (a > b ? 1 : -1) : (a < b ? 1 : -1);
+			});
+
+			mySort.forEach((item) => {
+				test.appendChild(item);
+			});
+		}
+
+		function cutNum(str) {
+			var regex = /\d+/g;
+			str = str.match(regex).join('');
+			return +str;
+		}
+
+	</script>
+</body>
+</html>
