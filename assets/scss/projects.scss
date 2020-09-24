@@ -1,14 +1,5 @@
 @import 'variables';
 
-.projects_wrapper {
-	background-color: $color-theme;
-	max-width: 1824px;
-	width: 100%;
-	min-height: 984px;
-	height: 100%;
-	
-}
-
 .proj_content {
 	padding: 40px;
 }
@@ -110,6 +101,7 @@
 	border-radius: 100%;
 	overflow: hidden;
 	margin-right: 20px;
+	flex-shrink: 0;
 }
 
 .developer_photo {
@@ -136,4 +128,37 @@
 		color: #9ea3b4;
 		text-align: left;
 	}	
+}
+
+@media (min-width: 1500px) and (max-width: 1880px) {
+
+	.proj_content {
+		padding: 15px;
+	}
+
+	.project_list_item {
+		width: calc(100% - 30px);
+	}
+
+	.proj_progress_wrap {
+		width: calc(100%/2);
+		margin: 0;
+	}
+
+	.proj_title-wrap, 
+	.proj_deadline-wrap, 
+	.proj_time-wrap,
+	.proj_status-wrap,
+	.proj_developer 
+		{
+			width: calc(100%/7);
+			padding: 0 5px;
+			margin: 0 10px;
+		}
+
+	.developer_thumb {
+		display: none;
+	}
+
+
 }

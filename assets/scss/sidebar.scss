@@ -2,7 +2,7 @@
 
 .sidebar_wrapper {
 	background-color: $color-main;
-    max-width: 97px;
+    max-width: 96px;
     width: 100%;
     min-height: 450px;
     box-shadow: 0 3px 80px rgba(23, 24, 32, 0.2);
@@ -22,8 +22,9 @@
     border-bottom: 3px solid transparent;
     background-color: $color-main;
     font-size: 25px;
-    margin: 35px 0;
-    padding: 25px 0;
+    margin: 25px 0;
+    padding-top: 25px;
+    padding-bottom: 10px;
 
     &:first-child {
         margin-top: 0;

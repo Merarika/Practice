@@ -5,12 +5,13 @@
 	<link rel="stylesheet" type="text/css" href="../assets/css/styles.css">
     <link rel="stylesheet" href="../assets/css/raport.css">
     <link rel="stylesheet" href="../assets/css/general_styles.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
 <body>
 	@@include('./header.html')
 	<div class="d-flex">
 		@@include('./sidebar.html')
-		<div class="raport_wrap">
+		<div class="content_wrapper">
 			<div class="charts d-flex">
 	            <div class="chart_block d-flex p-relative">
 	                <canvas id="Views_Chart"></canvas>
@@ -38,7 +39,7 @@
 	            </div>
 	        </div>
 			<div class="raport-chart d-flex flex-column">
-				<canvas id="visitorChart" width="1825" height="500"></canvas>
+				<canvas id="visitorChart"></canvas>
 			</div>
 			<div class="raport-info-titles d-flex ai-center">
 				<p class="raport-campaing-wrap raport-title-item"> Campaing 
@@ -65,7 +66,7 @@
 				<p class="raport-small-wrap raport-title-item"> CPM 
 					<i id="cpm" class="fas fa-chevron-down pointer"></i>
 				</p>
-				<p class="raport-small-wrap raport-title-item"> Status
+				<p class="raport-status-wrap raport-title-item"> Status
 					<i id="status" class="fas fa-chevron-down pointer"></i> 
 				</p>
 			</div>
